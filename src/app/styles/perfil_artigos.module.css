@@ -1,0 +1,42 @@
+.container{
+  padding: 1rem
+}
+.container h1 {
+  padding: 1em 0;
+}
+
+.container ul {width: 100%;}
+
+.container ul li {
+  padding: 1rem;
+  list-style-type: none;
+  display: inline-flex;
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+}
+
+.container ul li div.artigo_titulo {
+  width: 90%;
+}
+.container ul li div.acoes {
+  width: 10%;
+  text-align: right;
+
+}
+.container ul li a{
+  padding: auto;
+}
+
+.container ul li div.artigo_titulo a:hover{
+  text-decoration: underline;
+}
+
+/* tela pequena */
+@media (max-width: 450px) {
+  .container{
+    padding: 0;
+  }
+  .container ul li {
+    padding: 1rem 0 ;
+  }
+}

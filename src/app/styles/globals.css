@@ -40,3 +40,18 @@ a {
     color-scheme: dark;
   }
 }
+
+.main{
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 1rem;
+}
+
+/* tela pequena */
+@media (max-width: 450px) {
+  .main{
+    width: 100%;
+    padding: auto;
+  }
+}

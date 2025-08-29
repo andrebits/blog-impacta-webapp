@@ -1,0 +1,25 @@
+.container{
+  padding: 1rem
+}
+.container h1 {
+  padding: 1em 0;
+}
+.container p {
+  padding: 0 0 0.5em 0;
+}
+.container p a{
+  color: rgb(210, 146, 29);
+}
+.container ul li div.artigo_titulo a:hover{
+  text-decoration: underline;
+}
+
+/* tela pequena */
+@media (max-width: 450px) {
+  .container{
+    padding: 0;
+  }
+  .container ul li {
+    padding: 1rem 0 ;
+  }
+}

@@ -1,0 +1,58 @@
+.header {
+    background-color: rgb(255, 225, 171);
+}
+
+.header p{
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.header p a:hover { text-decoration: underline;}
+
+.header h1{
+    text-align: center;
+    margin: 0;
+    padding: 1.2em 0.5em 1.2em ;
+
+}
+
+.header h2{
+    text-align: center;
+    margin: 0;
+    padding: 0.2em 0.5em 0.2em ;
+    background-color: rgb(105, 93, 69);
+}
+
+ul.menu_superior{
+ padding: 0; 
+ margin: 0;
+ 
+ background-color: orange;
+ text-align: center;
+
+}
+
+ul.menu_superior li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.5em 1em;
+  cursor:pointer;
+}
+
+ul.menu_superior li a{
+  text-decoration: none;
+  width: 100%;
+}
+
+ul.menu_superior li:hover{
+  background-color: rgb(211, 138, 2);
+  
+}
+
+/* tela pequena */
+@media (max-width: 450px) {
+
+    ul.menu-superior li{ 
+        display:list-item
+    }
+}
