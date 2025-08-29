@@ -6,7 +6,7 @@ Esse projeto é parte integrante do projeto de conclusão do curso de Análise e
 
 Esse repositório contém o front-end de uma aplicação de blog. Os dados são consumidos da respectiva API, cujo repositório pode ser acessado [aqui](https://github.com/andrebits/blog-impacta-api?tab=readme-ov-file#blog-api).
 
-### Board 
+## Board 
 
 O board do projeto pode ser encontrado [aqui](https://trello.com/b/P8kvklUn).
 
