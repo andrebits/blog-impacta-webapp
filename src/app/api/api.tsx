@@ -68,3 +68,17 @@ export async function alterarSenha(
     }
   );
 }
+
+export async function deleteAccount(
+  token: string
+) {
+  return await axios.delete(
+    `${BASE_API_URL}/user/delete`, 
+    
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    }
+  );
+}

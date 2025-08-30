@@ -10,6 +10,9 @@
 .container p a{
   color: rgb(210, 146, 29);
 }
+.container p a:hover{
+  color: rgb(105, 71, 8);
+}
 .container ul li div.artigo_titulo a:hover{
   text-decoration: underline;
 }
