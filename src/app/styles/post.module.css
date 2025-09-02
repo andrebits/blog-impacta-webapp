@@ -1,0 +1,40 @@
+.container{
+  border: 1px solid gray;
+
+  margin: 1rem auto;
+  padding: 1rem 1rem;
+}
+.container h1{
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+.author{
+  color: #838383;
+  font-style: italic;
+  padding: 0.5em 0  0;
+}
+
+.author span{
+  font-weight: bold;
+}
+
+.container div{
+ text-indent: 5cap;
+ line-height: 1.5em;
+ text-align: justify;
+}
+
+.container div p{
+  padding: 0.5em 0;
+}
+
+/* tela pequena
+@media (max-width: 450px) {
+  .container{
+    width: 100%;
+  }
+  .container div{
+    width: 100%;
+  }
+} */

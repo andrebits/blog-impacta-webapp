@@ -22,6 +22,9 @@ export default function Login() {
       password: input_senha.current?.value || "",
     };
 
+    console.log("usuário: ", usuario.username);
+    console.log("senha: ", usuario.password);
+
     doLogin(usuario).then((json)=>{
 
       if (json.status === 200) {

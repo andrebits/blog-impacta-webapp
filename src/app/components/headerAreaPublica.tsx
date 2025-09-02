@@ -11,11 +11,11 @@ export default function HeaderAreaPublica({ username, token }: IPropsHeader) {
         <li>
           <Link href="/">Home</Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="#">Artigos</Link>
-        </li>
+        </li> */}
         <li>
-          <Link href="#">Autores</Link>
+          <Link href="/autores">Autores</Link>
         </li>
         <li>
           <Link href="#">Categorias</Link>

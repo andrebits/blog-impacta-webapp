@@ -4,6 +4,19 @@
 .container h1 {
   padding: 1em 0;
 }
+.new_post{
+  text-align: right;
+}
+
+.new_post a{
+  color: rgb(231, 153, 6);
+}
+
+
+.new_post a:hover{
+  color: rgb(169, 111, 3);
+}
+
 
 .container ul {width: 100%;}
 

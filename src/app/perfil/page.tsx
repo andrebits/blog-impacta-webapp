@@ -39,9 +39,9 @@ export default function Usuario() {
 
   function deleteAccountClickHandler(){
     const isDeletionConfirmed = confirm("Você tem certeza que deseja excluir permanentemente sua conta? Essa ação não pode ser desfeita");
-    // alert(isDeletionConfirmed ? "Bora excluir" : "Desistiu");
+
     if (isDeletionConfirmed){
-      console.log("token: ", token); // Ja confirmei que o token existe aqui
+      console.log("token: ", token); 
       deleteAccount(token).then((response)=>{
 
         if (response.status == 204){
@@ -57,7 +57,7 @@ export default function Usuario() {
   }
 
   useEffect(() => {
-    if (!isDeleted) return; // só roda se a conta foi deletada
+    if (!isDeleted) return; 
 
     const intervalId = setInterval(() => {
       setCounter(prev => {

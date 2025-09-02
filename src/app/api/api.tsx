@@ -82,3 +82,100 @@ export async function deleteAccount(
     }
   );
 }
+
+export async function createPost(
+  token: string,
+  post: ICreatePost,
+) {
+  return await axios.post(
+    `${BASE_API_URL}/posts/create`, 
+      {
+        "title": post.title,
+        "content": post.content
+      }, 
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+  );
+}
+
+export async function getPostListByUser(
+  token: string,
+  author: string
+) {
+  return await axios.get(
+    `${BASE_API_URL}/posts/author/${author}`, 
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        }
+      }
+  );
+}
+
+export async function getPostById(
+  id: string
+) {
+  return await axios.get(
+    `${BASE_API_URL}/posts/${id}`
+  );
+}
+
+
+export async function deletePost(
+  token: string,
+  id: string
+) {
+  return await axios.delete(
+    `${BASE_API_URL}/posts/delete/${id}/`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        }
+      }
+  );
+}
+
+export async function getPostList(){
+  return await axios.get(
+    `${BASE_API_URL}/posts/`
+  );
+}
+
+export async function updatePost(
+  token: string,
+  post: IPost,
+) {
+  return await axios.patch(
+    `${BASE_API_URL}/posts/update/${post.id}/`, 
+      {
+        "title": post.title,
+        "content": post.content
+      }, 
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+  );
+}
+
+export async function getAuthors(){
+  return await axios.get(
+    `${BASE_API_URL}/authors/`
+  );
+}
+
+export async function getAuthorById(id: string){
+  return await axios.get(
+    `${BASE_API_URL}/authors/${id}`
+  );
+}
+
+export async function getPostsByAuthor(authorUsername: string){
+  return await axios.get(
+    `${BASE_API_URL}/posts/author/${authorUsername}`
+  );
+}

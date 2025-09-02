@@ -1,0 +1,52 @@
+.container{
+  padding: 1rem;
+
+}
+
+.container label {
+  display: inline-block;
+  padding: 0 0 0.5em 0;
+  font-size: 0.9em;
+}
+
+.containter_title{
+  padding: 1rem 0;
+}
+
+.containter_title input{
+  padding: 0.5em;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+.containter_buttons{
+  padding: 1rem;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.containter_buttons button{
+  width: 150px;
+  height: 2em;
+  margin: 0.3rem ;
+}
+.containter_buttons button:hover{
+  cursor: pointer;
+}
+
+.message{
+  color: rgb(67, 144, 67);
+
+}
+
+.message a{
+    font-weight: bold;
+}
+
+.message a:hover{
+  text-decoration: underline;
+}
+
+/* tela pequena */
+@media (max-width: 450px) {
+
+}
