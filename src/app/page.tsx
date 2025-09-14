@@ -14,7 +14,7 @@ export function ArtigoItem(post: IPost){
     return (
             <li>
               <div className={styles.artigo_titulo}>
-                  <Link href={`/post/${post.id}`}>{datetimeFormat(post.updated_at!)} - {post.title}</Link>
+                  <Link href={`/artigo/${post.id}`}>{datetimeFormat(post.updated_at!)} - {post.title}</Link>
                   <p>{post.content}</p>
               </div>
             </li>
@@ -53,7 +53,7 @@ export default function Home() {
   
   return (
     <div className={styles.container}>
-  
+      <h1>Últimos artigos:</h1>
       <ul>
         {list}
       </ul>

@@ -24,13 +24,13 @@ export default function Post() {
         getPostById(id.toString()).then((response)=>{
             setPost(response.data);
             setIsLoaded(true);
-            console.log("response.data: ", response.data);
+           
         }, (error) =>{
 
             setIsLoaded(true);
             setError(error);
             setIsSucceeded(false);
-            console.log("error: ", error);
+
         });
         
     }, [id]);

@@ -15,7 +15,7 @@ export function ArtigoItem({ id, title, updated_at }: IPost){
     return (
             <li>
               <div className={styles.artigo_titulo}>
-                  <Link href={`/post/${id}`}>{datetimeFormat(updated_at!)} - {title}</Link>
+                  <Link href={`/artigo/${id}`}>{datetimeFormat(updated_at!)} - {title}</Link>
               </div>
             </li>
     );

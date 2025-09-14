@@ -17,7 +17,7 @@ export function ArtigoItem({ id, title, updated_at, deleteClickHandler }: Artigo
     return (
             <li>
             <div className={styles.artigo_titulo}>
-                <Link href={`/post/${id}`} target="blank">{datetimeFormat(updated_at!)} - {title}</Link>
+                <Link href={`/artigo/${id}`} target="blank">{datetimeFormat(updated_at!)} - {title}</Link>
             </div>
             
             <div className={styles.acoes}>

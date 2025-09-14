@@ -39,13 +39,10 @@ export default function Autores() {
 
     },[]);
 
-
-
-  
     if (error) return <p>Erro: {error.message}</p>;
     if (!isLoaded) return <p>Carregando...</p>;
   
-    console.log(authorsList);
+ 
     const list = authorsList.map((author: IAuthor) => (
             <AuthorItem key={author.id} {...author}/>
     ));
