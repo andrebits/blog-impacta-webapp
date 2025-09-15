@@ -38,11 +38,13 @@ export default function Cadastro() {
         setIsSucceeded(false);
         setMessage("Usuário já existe");
 
-        if (usuario.username.trim() === "" ||
+        if (usuario.username && usuario.password){
+          if (usuario.username.trim() === "" ||
           usuario.email!.trim() === "" ||
           usuario.password.trim() === "") {
             setMessage("Preencha todos os campos");
           }
+        }        
       }
     });
       
@@ -76,8 +78,14 @@ export default function Cadastro() {
       <input type="password" name="txt_senha" ref={input_senha} />
 
       <div>
-        <button type="submit" onClick={(e) => { e.preventDefault(); cadastrarUsuarioHandlerClick(); }}>Cadastrar</button>
-        <button type="reset" onClick={(e) => { e.preventDefault(); limparCampos(); }}>Limpar</button>
+        <button 
+        type="submit" 
+        onClick={(e) => { e.preventDefault(); cadastrarUsuarioHandlerClick(); }}
+        className="bg-yellow-400 border rounded-lg hover:bg-yellow-500 shadow">Cadastrar</button>
+        <button 
+        type="reset" 
+        onClick={(e) => { e.preventDefault(); limparCampos(); }}
+        className="border rounded-lg hover:bg-stone-200 shadow">Limpar</button>
       </div>
 
       {message && <div className={className}>{message}</div>}

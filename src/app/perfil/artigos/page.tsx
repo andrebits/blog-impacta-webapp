@@ -8,6 +8,7 @@ import { deletePost, getPostListByUser, getUser } from "@/app/api/api";
 import IUsuario from "@/app/interfaces/IUsuario";
 import Link from "next/link";
 import datetimeFormat from "@/app/utils/datetimeFormat";
+import Image from "next/image";
 
 type ArtigoItemProps = IPost & {
   deleteClickHandler: (id: string) => void;
@@ -16,14 +17,31 @@ type ArtigoItemProps = IPost & {
 export function ArtigoItem({ id, title, updated_at, deleteClickHandler }: ArtigoItemProps){
     return (
             <li>
-            <div className={styles.artigo_titulo}>
-                <Link href={`/artigo/${id}`} target="blank">{datetimeFormat(updated_at!)} - {title}</Link>
-            </div>
-            
-            <div className={styles.acoes}>
-                <Link href={`/perfil/artigos/edit/${id}`} title="editar">📝</Link> &nbsp;
-                <Link href="#" title="excluir" onClick={(e)=>{e.preventDefault(); deleteClickHandler(id)}}>❌</Link>
-            </div>
+                <div className={styles.artigo_titulo}>
+                    <Link href={`/artigo/${id}`} target="blank">{datetimeFormat(updated_at!)} - {title}</Link>
+                </div>
+                
+                <div className="flex gap-5">
+                    <Link href={`/perfil/artigos/edit/${id}`} 
+                        title="editar">
+                        <Image 
+                            src="/icons/edit-pencil.svg" 
+                            alt="Editar" 
+                            width={24} 
+                            height={24} 
+                            className="cursor-pointer transform hover:scale-110 transition-transform duration-200"
+                            />
+                    </Link>
+                    <Link href="#" title="excluir" onClick={(e)=>{e.preventDefault(); deleteClickHandler(id)}}>
+                    <Image 
+                            src="/icons/trash-can.svg" 
+                            alt="Editar" 
+                            width={24} 
+                            height={24} 
+                            className="cursor-pointer transform hover:scale-110 transition-transform duration-200"
+                            />
+                    </Link>
+                </div>
             </li>
     );
 }
@@ -99,7 +117,7 @@ export default function Perfil() {
   return (
     <div className={styles.container}>
       <h1>Olá, {user?.username}!</h1>
-      <p className={styles.new_post}><Link href="/perfil/artigos/create">Novo artigo</Link></p>
+      <p className="text-right"><Link href="/perfil/artigos/create" className="border rounded-lg text-white font-bold bg-amber-500 shadow-lg hover:bg-amber-600 px-10 py-3">Novo artigo</Link></p>
       <p>Aqui estão seus <b>artigos</b></p>
 
       <ul>

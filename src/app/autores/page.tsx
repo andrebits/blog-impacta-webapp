@@ -9,10 +9,9 @@ import Link from "next/link";
 
 export function AuthorItem({username}: IAuthor){
     return (
-            <li>
-              <div className={styles.artigo_titulo}>
-                  <Link href={`/autores/${username}`}>{username}</Link>
-              </div>
+            <li className="border hover:bg-amber-200 hover:cursor-pointer bg-white">
+              <Link href={`/autores/${username}`}
+              className="p-2 block">{username}</Link>              
             </li>
     );
 }
@@ -21,7 +20,6 @@ export default function Autores() {
     const [error, setError] = useState<Error | null> (null);
     const [isLoaded, setIsLoaded] = useState <boolean> (false);
     const [authorsList, setAuthorsList] = useState<IAuthor[]>([]);
-
 
     useEffect(()=>{
         
@@ -41,18 +39,15 @@ export default function Autores() {
 
     if (error) return <p>Erro: {error.message}</p>;
     if (!isLoaded) return <p>Carregando...</p>;
-  
- 
+
     const list = authorsList.map((author: IAuthor) => (
             <AuthorItem key={author.id} {...author}/>
     ));
-
   
   return (
     <div className={styles.container}>
-      
-      <h1>Lista de autores do site</h1>
-      <ul>
+      <h1 className="text-2xl font-bold mt-5">Lista de autores do site</h1>
+      <ul  className="w-3/4 mx-auto">
         {list}
       </ul>
     </div>

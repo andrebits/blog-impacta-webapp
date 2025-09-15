@@ -56,7 +56,7 @@ export default function AuthorDetail() {
   
   return (
     <div className={styles.container}>
-      {!error ? <h1>Artigos de <span>{authorUsername}</span></h1> : <p>{error.message}</p>}
+      {!error ? <h1  className="text-2xl font-bold mt-5">Artigos de <span>{authorUsername}</span></h1> : <p>{error.message}</p>}
       <ul>
         {list}
       </ul>

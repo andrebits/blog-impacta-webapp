@@ -26,20 +26,19 @@
 ul.menu_superior{
  padding: 0; 
  margin: 0;
- 
  background-color: orange;
  text-align: center;
-
 }
 
 ul.menu_superior li{
   list-style-type: none;
   display: inline-block;
-  padding: 0.5em 1em;
   cursor:pointer;
 }
 
 ul.menu_superior li a{
+  padding: 0.5em 1em;
+  display: inline-block;
   text-decoration: none;
   width: 100%;
 }

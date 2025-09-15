@@ -90,13 +90,18 @@ export default function UpdatePost() {
 	   <ReactEditor ref={input_content} />
 	  </div>
 	  <div className={styles.containter_buttons}>
-		<button type="submit" onClick={(e) => { e.preventDefault(); save(post!.id)}}>Salvar</button>
+		<button
+		type="submit" 
+		onClick={(e) => { e.preventDefault(); save(post!.id)}}
+		className="bg-yellow-400 border rounded-lg hover:bg-yellow-500 shadow"
+		>Salvar</button>
 		<button type="reset" onClick={(e) => { 
 		  e.preventDefault(); 
 		  limparCampos();
 		  setMessage("");
 		  setLinkNewPost(null);
-		  }}>Limpar</button>
+		  }}
+		  className="border rounded-lg hover:bg-stone-200 shadow">Limpar</button>
 	  </div>
 	  <div className={styles.message}>{isSucceded ? message: error?.message}{isSucceded ?  linkNewPost : ""}</div>
 

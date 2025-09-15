@@ -42,7 +42,7 @@ export default function Post() {
   
   return (
     <div className={styles.container}>
-        <h1>{post?.title}</h1>
+        <h1  className="text-2xl font-bold">{post?.title}</h1>
         <p className={styles.author}>Por <span>{post?.author} - </span>Atualizado em {datetimeFormat(post?.updated_at!)}</p><br/>
         <div dangerouslySetInnerHTML={{ __html: post?.content || "" }} />
     </div>

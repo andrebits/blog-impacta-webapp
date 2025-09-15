@@ -59,13 +59,16 @@ export default function CreatePost() {
        <ReactEditor ref={input_content} />
       </div>
       <div className={styles.containter_buttons}>
-        <button type="submit" onClick={(e) => { e.preventDefault(); save()}}>Publicar</button>
+        <button type="submit"
+          onClick={(e) => { e.preventDefault(); save()}}
+          className="bg-yellow-400 border rounded-lg hover:bg-yellow-500 shadow">Publicar</button>
         <button type="reset" onClick={(e) => { 
           e.preventDefault(); 
           limparCampos();
           setMessage("");
           setLinkNewPost(null);
-          }}>Limpar</button>
+          }}
+          className="border rounded-lg hover:bg-stone-200 shadow">Limpar</button>
       </div>
       <div className={styles.message}>{isSucceded ? message: error?.message}{isSucceded ?  linkNewPost : ""}</div>
 

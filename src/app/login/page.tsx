@@ -64,7 +64,7 @@ export default function Login() {
   
   return (
     <div className={styles.container}>
-      <h1>Login</h1>
+      <h1 className="text-2xl font-bold">Login</h1>
 
       <label>Usuário:</label>
       <input type="text" name="txt_usuario" ref={input_usuario} />
@@ -74,8 +74,14 @@ export default function Login() {
       <div className={styles.esqueci_a_senha} style={{padding:0}}><Link href="/senha/redefinir">Esqueci a senha</Link></div>
 
       <div>
-        <button type="submit" onClick={(e) => { e.preventDefault(); loginUsuarioHandlerClick(); }}>Enviar</button>
-        <button type="reset" onClick={(e) => { e.preventDefault(); limparCampos(); }}>Limpar</button>
+        <button 
+        type="submit" 
+        onClick={(e) => { e.preventDefault(); loginUsuarioHandlerClick(); }}
+        className="bg-yellow-400 border rounded-lg hover:bg-yellow-500 shadow">Enviar</button>
+        <button 
+        type="reset" 
+        onClick={(e) => { e.preventDefault(); limparCampos(); }}
+        className="border rounded-lg hover:bg-stone-200 shadow">Limpar</button>
       </div>
 
       {message && <div className={className}>{message}</div>}

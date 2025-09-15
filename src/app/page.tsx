@@ -26,7 +26,6 @@ export default function Home() {
     const [isLoaded, setIsLoaded] = useState <boolean> (false);
     const [postList, setPostList] = useState<IPost[]>([]);
 
-
     useEffect(()=>{
         
         getPostList().then((response)=>{
@@ -39,9 +38,6 @@ export default function Home() {
 
     },[]);
 
-
-
-  
     if (error) return <p>Erro: {error.message}</p>;
     if (!isLoaded) return <p>Carregando...</p>;
   
@@ -53,7 +49,7 @@ export default function Home() {
   
   return (
     <div className={styles.container}>
-      <h1>Últimos artigos:</h1>
+      <h1 className="text-2xl font-bold pt-5">Últimos artigos:</h1>
       <ul>
         {list}
       </ul>
